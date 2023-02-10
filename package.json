@@ -1,0 +1,15 @@
+{
+	"name": "ts-learn",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"dev": "tsc src/index.ts",
+		"watch": "tsc src/index.ts -w"
+	},
+	"repository": "git@github.com:f5l5y5/ts-learn.git",
+	"author": "fuyunlong <fuyunlong@delonix.group>",
+	"license": "MIT",
+	"devDependencies": {
+		"typescript": "^4.9.5"
+	}
+}
