@@ -1,22 +1,12 @@
-class Control {
-	private state: any
-}
+type Arr = [1, 2, 3, 4]
 
-interface SelectableControl extends Control {
-	select(): void
-}
+type Reverse<T extends any[]> = T extends [infer first, ...infer rest] ? [...Reverse<rest>, first] : T
 
-class Button extends Control implements SelectableControl {
-	select() {}
-}
+type A = Reverse<Arr> // [4,3,2,1]
 
-class TextBox extends Control {
-	select() {}
+const fn = () => {
+	const arr = [1, 3, 2]
+	const x = '1'
+	if (arr.includes(x)) {
+	}
 }
-
-// 错误：“Image”类型缺少“state”属性。
-class Image implements SelectableControl {
-	select() {}
-}
-
-class Location {}
